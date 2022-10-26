@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <HediffDef ParentName="ImplantHediffBase"> <!-- Psychic Dryad -->
+    <defName>PsychicDryad</defName>
+    <label>Psychic dryad</label> <!-- Rebalance by Victor -->
+    <labelNoun>a psychic dryad</labelNoun>
+    <description>A fully grown dryad, capable of enhancing a persons psychic ability, giving telepathy and improving their connection to nature.</description> <!-- Rebalance by Victor -->
+    <spawnThingOnRemoved>Psychic_Dryad</spawnThingOnRemoved>
+	<defaultLabelColor>(0, 0.6, 0.4)</defaultLabelColor> <!-- Rebalance by Victor -->
+	<stages>
+		<li>
+			<statOffsets>
+				<NegotiationAbility>0.50</NegotiationAbility>
+				<TradePriceImprovement>0.10</TradePriceImprovement>
+				<PsychicSensitivity>0.25</PsychicSensitivity>
+				<MeditationFocusGain>0.25</MeditationFocusGain>
+			</statOffsets>
+		</li>
+	</stages>
+  </HediffDef>
+
+  <ThingDef ParentName="AnimaImplant">
+    <defName>Psychic_Dryad</defName>
+    <label>psychic dryad</label> <!-- Rebalance by Victor -->
+    <description>A fully grown dryad, capable of enhancing a persons psychic ability, giving telepathy and improving their connection to nature.</description> <!-- Rebalance by Victor -->
+    <statBases>
+      <MarketValue>1000</MarketValue>
+	  	   <WorkToMake>6000</WorkToMake>
+    </statBases>
+	<costList>
+      <MedicineHerbal>10</MedicineHerbal>
+      <AnimaFiber>200</AnimaFiber>
+      <WoodLog>100</WoodLog>
+    </costList>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallPsychicDryad</defName>
+    <label>install psychic dryad</label>
+    <description>Install a psychic dryad.</description>
+    <jobString>Installing psychic dryad.</jobString>
+	<skillRequirements>
+      <Medicine>12</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Psychic_Dryad</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Psychic_Dryad</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>PsychicDryad</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemovePsychicDryad</defName>
+    <label>remove psychic Dryad</label>
+    <description>Remove psychic Dryad.</description>
+    <jobString>Removing psychic Dryad.</jobString>
+    <removesHediff>PsychicDryad</removesHediff>
+  </RecipeDef>
+
+  <HediffDef ParentName="ImplantHediffBase">  <!-- Mind Dryad -->
+    <defName>MindDryad</defName>
+    <label>Mind dryad</label> <!-- Rebalance by Victor -->
+    <labelNoun>a mind dryad</labelNoun>
+    <description>A fully grown dryad that helps a person with all their mind processing needs, it's also a great friend.</description> <!-- Rebalance by Victor -->
+    <spawnThingOnRemoved>Mind_Dryad</spawnThingOnRemoved> 
+	<defaultLabelColor>(0, 0.6, 0.4)</defaultLabelColor> <!-- Rebalance by Victor -->
+	<stages>
+		<li>
+			<statOffsets>
+				<MentalBreakThreshold>-0.1</MentalBreakThreshold>
+				<GlobalLearningFactor>0.30</GlobalLearningFactor>
+				<MeditationFocusGain>0.10</MeditationFocusGain>
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<offset>0.10</offset> <!-- Rebalance by Victor -->
+				</li>
+			</capMods>
+		</li>
+	</stages>
+  </HediffDef>
+
+  <ThingDef ParentName="AnimaImplant">
+    <defName>Mind_Dryad</defName>
+    <label>mind dryad</label> <!-- Rebalance by Victor -->
+    <description>A fully grown dryad capable of enhancing a persons mind, giving increased information processing and improving their connection to nature.</description>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+	  	   <WorkToMake>6000</WorkToMake>
+    </statBases>
+	<costList>
+      <MedicineHerbal>20</MedicineHerbal>
+      <AnimaFiber>300</AnimaFiber>
+      <WoodLog>200</WoodLog>
+    </costList>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallmindDryad</defName>
+    <label>install mind dryad</label>
+    <description>Install a mind dryad.</description>
+    <jobString>Installing mind dryad.</jobString>
+	<skillRequirements>
+      <Medicine>12</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Mind_Dryad</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Mind_Dryad</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>MindDryad</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemovemindDryad</defName>
+    <label>remove mind Dryad</label>
+    <description>Remove mind Dryad.</description>
+    <jobString>Removing mind Dryad.</jobString>
+    <removesHediff>MindDryad</removesHediff>
+  </RecipeDef>
+
+ 
+</Defs>

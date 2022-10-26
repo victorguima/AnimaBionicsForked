@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ResearchProjectDef>
+		<defName>AnimaImplants</defName>
+		<label>Anima Bodies</label>
+		<description>We can modify our bodies to match that of ents and dryads of ancient stories, becoming one with nature.</description>
+		<baseCost>4000</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>DomesticationAnimaGrass</li>
+		</prerequisites>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>0.70</researchViewY>
+	</ResearchProjectDef>
+</Defs>
