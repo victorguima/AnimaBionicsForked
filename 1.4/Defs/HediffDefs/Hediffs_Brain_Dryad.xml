@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef ParentName="ImplantHediffBase"> <!-- Psychic Dryad -->
+		<defName>PsychicDryad</defName>
+		<label>Psychic dryad</label>  
+		<labelNoun>a psychic dryad</labelNoun>
+		<description>An installed psychic dryad.</description>
+		<descriptionHyperlinks>
+			<ThingDef>PsychicDryad</ThingDef>
+		</descriptionHyperlinks>
+		<spawnThingOnRemoved>PsychicDryad</spawnThingOnRemoved>
+		<defaultLabelColor>(0, 0.6, 0.4)</defaultLabelColor>  
+		<stages>
+			<li>
+				<statOffsets>
+					<MeleeDodgeChance>-15</MeleeDodgeChance>
+					<NegotiationAbility>0.50</NegotiationAbility>
+					<SocialImpact>0.30</SocialImpact>
+					<PsychicSensitivity>0.25</PsychicSensitivity>
+				</statOffsets>
+			</li>
+		</stages>
+		<addedPartProps>
+		  <betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+
+	<ThingDef ParentName="AnimaImplant">
+		<defName>PsychicDryad</defName>
+		<label>psychic dryad</label>  
+		<description>A special kind of dryad that can sense and understand human emotions, very powerful in the right hands. In combat, however, being able to unconsciously read enemies' aggression can cause hesitation.</description>
+		<descriptionHyperlinks>
+			<HediffDef>PsychicDryad</HediffDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>1000</MarketValue>
+			<WorkToMake>6000</WorkToMake>
+		</statBases>
+		<costList>
+			<MedicineHerbal>10</MedicineHerbal>
+			<AnimaFiber>200</AnimaFiber>
+			<WoodLog>100</WoodLog>
+		</costList>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
+		<defName>InstallPsychicDryad</defName>
+		<label>install psychic dryad</label>
+		<description>Install a psychic dryad.</description>
+		<jobString>Installing psychic dryad.</jobString>
+		<descriptionHyperlinks>
+			<ThingDef>PsychicDryad</ThingDef>
+			<HediffDef>PsychicDryad</HediffDef>
+		</descriptionHyperlinks>
+		<skillRequirements>
+		  <Medicine>12</Medicine>
+		</skillRequirements>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>PsychicDryad</li>
+			  </thingDefs>
+			</filter>
+			<count>1</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>PsychicDryad</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+		  <li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>PsychicDryad</addsHediff>
+	</RecipeDef>
+  
+	<RecipeDef ParentName="SurgeryRemoveImplantBase">
+		<defName>RemovePsychicDryad</defName>
+		<label>remove psychic dryad</label>
+		<description>Remove psychic dryad.</description>
+		<jobString>Removing psychic dryad.</jobString>
+		<removesHediff>PsychicDryad</removesHediff>
+	</RecipeDef>
+
+	<HediffDef ParentName="ImplantHediffBase">  <!-- Mind Dryad -->
+		<defName>MindDryad</defName>
+		<label>Mind dryad</label>  
+		<labelNoun>a mind dryad</labelNoun>
+		<description>An installed mind dryad.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MindDryad</ThingDef>
+		</descriptionHyperlinks>
+		<spawnThingOnRemoved>MindDryad</spawnThingOnRemoved> 
+		<defaultLabelColor>(0, 0.6, 0.4)</defaultLabelColor>  
+		<stages>
+			<li>
+				<statOffsets>
+					<MentalBreakThreshold>0.10</MentalBreakThreshold>
+					<RestRateMultiplier>0.25</RestRateMultiplier>
+					<MeditationFocusGain>0.25</MeditationFocusGain>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>1.00</offset>
+						<setMax>1.00</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<addedPartProps>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+
+	<ThingDef ParentName="AnimaImplant">
+		<defName>MindDryad</defName>
+		<label>mind dryad</label>  
+		<description>A fully grown dryad, able to fill in while the brain is resting.
+		\nUsed to a tranquil existance, can aid in maintaining focus during meditation, but does not like to be under pressure.
+		\nWhile the mind dryad can adapt very well to the natural brain, any consciousness affecting drugs or implants will be considered threats and be nullified by it(caps consciousness in 100%).</description>
+		<descriptionHyperlinks>
+			<HediffDef>MindDryad</HediffDef>
+		</descriptionHyperlinks>
+		<statBases>
+		  <MarketValue>1000</MarketValue>
+			   <WorkToMake>6000</WorkToMake>
+		</statBases>
+		<costList>
+		  <MedicineHerbal>20</MedicineHerbal>
+		  <AnimaFiber>300</AnimaFiber>
+		  <WoodLog>200</WoodLog>
+		</costList>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
+		<defName>InstallMindDryad</defName>
+		<label>install mind dryad</label>
+		<description>Install a mind dryad.</description>
+		<jobString>Installing mind dryad.</jobString>
+		<descriptionHyperlinks>
+			<ThingDef>MindDryad</ThingDef>
+			<HediffDef>MindDryad</HediffDef>
+		</descriptionHyperlinks>
+		<skillRequirements>
+		  <Medicine>12</Medicine>
+		</skillRequirements>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>MindDryad</li>
+			  </thingDefs>
+			</filter>
+			<count>1</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>MindDryad</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+		  <li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>MindDryad</addsHediff>
+	</RecipeDef>
+  
+	<RecipeDef ParentName="SurgeryRemoveImplantBase">
+		<defName>RemoveMindDryad</defName>
+		<label>remove mind dryad</label>
+		<description>Remove mind dryad.</description>
+		<jobString>Removing mind dryad.</jobString>
+		<removesHediff>MindDryad</removesHediff>
+	</RecipeDef>
+
+</Defs>

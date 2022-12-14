@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<HediffDef ParentName="ImplantHediffBase"> <!-- Anima Barkskin -->
+		<defName>AnimaPlate</defName>
+		<label>anima barkskin</label>
+		<description>An installed anima barkskin.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaPlate</ThingDef>
+		</descriptionHyperlinks>
+		<labelNoun>an anima barkskin</labelNoun>
+		<defaultLabelColor>(0, 0.6, 0.4)</defaultLabelColor>
+		<stages>
+			<li>
+				<statOffsets>
+					<ArmorRating_Blunt>0.10</ArmorRating_Blunt> 
+					<ArmorRating_Heat>-0.25</ArmorRating_Heat>  
+					<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+					<PsychicEntropyRecoveryRate>0.1</PsychicEntropyRecoveryRate>  
+				</statOffsets>
+			</li>
+		</stages>
+		<addedPartProps>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+
+	<ThingDef ParentName="AnimaImplant">
+		<defName>AnimaPlate</defName>
+		<label>anima barkskin</label>
+		<description>A thick bark-like hide covering the entire body. Helps at releasing neural heat, but is susceptible to fire.</description>  
+		<descriptionHyperlinks>
+			<HediffDef>AnimaPlate</HediffDef>
+		</descriptionHyperlinks>
+		<costList>
+		  <MedicineHerbal>10</MedicineHerbal>
+		  <AnimaFiber>50</AnimaFiber>
+		  <WoodLog>500</WoodLog>
+		</costList>
+		<statBases>
+		  <Mass>2.5</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
+		<defName>InstallAnimaPlate</defName>
+		<label>install anima barkskin</label>
+		<description>Install barkskin.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaPlate</ThingDef>
+			<HediffDef>AnimaPlate</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing barkskin.</jobString>
+		<skillRequirements>
+		  <Medicine>10</Medicine>
+		</skillRequirements>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>AnimaPlate</li>
+			  </thingDefs>
+			</filter>
+			<count>1</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>AnimaPlate</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+		  <li>Torso</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>AnimaPlate</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryRemoveImplantBase">
+		<defName>RemoveAnimaPlating</defName>
+		<label>remove barkskin</label>
+		<description>Remove barkskin.</description>
+		<jobString>Removing barkskin.</jobString>
+		<removesHediff>AnimaPlate</removesHediff>
+	</RecipeDef>
+  
+	<HediffDef ParentName="AddedBodyPartBase"> <!-- Anima Liver -->
+		<defName>AnimaLiver</defName>
+		<label>anima liver</label>
+		<description>An installed anima liver.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaLiver</ThingDef>
+		</descriptionHyperlinks>
+		<labelNoun>an anima liver</labelNoun>  
+		<defaultLabelColor>(0, 0.6, 0.4)</defaultLabelColor>
+		<stages>
+			<li>
+				<statOffsets>
+					<ImmunityGainSpeedFactor>0.1</ImmunityGainSpeedFactor>
+					<MeditationFocusGain>0.05</MeditationFocusGain>
+					<PsychicEntropyMax>10</PsychicEntropyMax>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.05</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1</partEfficiency>  
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<spawnThingOnRemoved>AnimaLiver</spawnThingOnRemoved>
+	</HediffDef>
+
+	<ThingDef ParentName="AnimaPart">
+		<defName>AnimaLiver</defName>
+		<label>anima liver</label>
+		<description>Roots spreading through the body, this one goes into the liver. Boosts blood circulation and coagulation while strenghtening the immune system. Enhances psychic meditation.</description>  
+		<descriptionHyperlinks>
+			<HediffDef>AnimaLiver</HediffDef>
+		</descriptionHyperlinks>
+		<costList>
+		  <MedicineHerbal>10</MedicineHerbal>
+		  <AnimaFiber>200</AnimaFiber>
+		  <WoodLog>100</WoodLog>
+		</costList>
+		<statBases>
+		  <Mass>1.5</Mass>
+		  <MarketValue>500</MarketValue>
+		   <WorkToMake>3000</WorkToMake>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallAnimaLiver</defName>
+		<label>install anima liver</label>
+		<description>Install anima liver.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaLiver</ThingDef>
+			<HediffDef>AnimaLiver</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing anima liver.</jobString>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>AnimaLiver</li>
+			  </thingDefs>
+			</filter>
+			<count>1</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>AnimaLiver</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+		  <li>Liver</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>AnimaLiver</addsHediff>
+		<skillRequirements>
+		  <Medicine>10</Medicine>
+		</skillRequirements>
+	</RecipeDef>
+  
+	<HediffDef ParentName="AddedBodyPartBase"> <!-- Anima Kidney -->
+		<defName>AnimaKidney</defName>
+		<label>anima kidney</label>
+		<description>An installed anima kidney.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaKidney</ThingDef>
+		</descriptionHyperlinks>
+		<labelNoun>an anima kidney</labelNoun>  
+		<defaultLabelColor>(0, 0.6, 0.4)</defaultLabelColor>
+		<stages>
+			<li>
+				<statOffsets>
+					<MeditationFocusGain>0.05</MeditationFocusGain>  
+					<PsychicEntropyMax>5</PsychicEntropyMax>
+				</statOffsets>
+				<naturalHealingFactor>1.15</naturalHealingFactor>  
+			</li>
+		</stages>
+		<addedPartProps>
+		  <solid>true</solid>
+		  <partEfficiency>1</partEfficiency>  
+		  <betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<spawnThingOnRemoved>AnimaKidney</spawnThingOnRemoved>
+	</HediffDef>
+
+	<ThingDef ParentName="AnimaPart">
+		<defName>AnimaKidney</defName>
+		<label>anima kidney</label>
+		<description>Roots spreading through the body, this one goes into the kidneys. Boosts natural healing and enhances psychic meditation.</description>  
+		<descriptionHyperlinks>
+			<HediffDef>AnimaKidney</HediffDef>
+		</descriptionHyperlinks>
+		<costList>
+			<MedicineHerbal>10</MedicineHerbal>
+			<AnimaFiber>200</AnimaFiber>
+			<WoodLog>100</WoodLog>
+		</costList>
+		<statBases>
+			<Mass>1.5</Mass>
+			<MarketValue>500</MarketValue>
+			<WorkToMake>3000</WorkToMake>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>installAnimaKidney</defName>
+		<label>install anima kidney</label>
+		<description>Install anima kidney.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaKidney</ThingDef>
+			<HediffDef>AnimaKidney</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing anima kidney.</jobString>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>AnimaKidney</li>
+			  </thingDefs>
+			</filter>
+			<count>1</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>AnimaKidney</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+		  <li>Kidney</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>AnimaKidney</addsHediff>
+		<skillRequirements>
+		  <Medicine>10</Medicine>
+		</skillRequirements>
+	</RecipeDef>
+  
+	<HediffDef ParentName="AddedBodyPartBase"> <!-- Anima Lung -->
+		<defName>AnimaLung</defName>
+		<label>anima polux lung</label>
+		<description>An installed anima polux lung.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaLung</ThingDef>
+		</descriptionHyperlinks>
+		<labelNoun>an anima lung</labelNoun>  
+		<defaultLabelColor>(0, 0.6, 0.4)</defaultLabelColor>
+		<addedPartProps>
+		  <solid>true</solid>
+		  <partEfficiency>1</partEfficiency>   
+		  <betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<stages>  
+			<li>
+				<statOffsets>
+					<MeditationFocusGain>0.05</MeditationFocusGain>
+					<PsychicEntropyRecoveryRate>0.15</PsychicEntropyRecoveryRate>
+					<ToxicEnvironmentResistance>0.25</ToxicEnvironmentResistance>
+				</statOffsets>
+			</li>
+		</stages>
+		<spawnThingOnRemoved>AnimaLung</spawnThingOnRemoved>
+	</HediffDef>
+
+	<ThingDef ParentName="AnimaPart">
+		<defName>AnimaLung</defName>
+		<label>anima polux lung</label>
+		<description>Roots spreading through the body, this one goes into the lungs. Allows the owner to meditate better and massively strenghtens neural heat dissipation.</description>
+		<descriptionHyperlinks>
+			<HediffDef>AnimaLung</HediffDef>
+		</descriptionHyperlinks>
+		<costList>
+		  <MedicineHerbal>10</MedicineHerbal>
+		  <AnimaFiber>200</AnimaFiber>
+		  <WoodLog>100</WoodLog>
+		</costList>
+		<statBases>
+		  <Mass>1.5</Mass>
+		  <MarketValue>500</MarketValue>
+		   <WorkToMake>3000</WorkToMake>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallAnimaLung</defName>
+		<label>install anima polux lung</label>
+		<description>Install anima lung.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaLung</ThingDef>
+			<HediffDef>AnimaLung</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing anima lung.</jobString>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>AnimaLung</li>
+			  </thingDefs>
+			</filter>
+			<count>1</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>AnimaLung</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+		  <li>Lung</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>AnimaLung</addsHediff>
+		<skillRequirements>
+		  <Medicine>10</Medicine>
+		</skillRequirements>
+	</RecipeDef>
+  
+	<HediffDef ParentName="AddedBodyPartBase"> <!-- Anima Eyes -->
+		<defName>AnimaEye</defName>
+		<label>anima eye</label>
+		<description>An installed anima eye.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaEye</ThingDef>
+		</descriptionHyperlinks>
+		<labelNoun>an anima eye</labelNoun>
+		<defaultLabelColor>(0, 0.6, 0.4)</defaultLabelColor>
+		<stages>
+			<li>
+				<statOffsets>
+					<PawnBeauty>1</PawnBeauty>
+					<MeditationFocusGain>0.05</MeditationFocusGain>
+				</statOffsets>
+			</li>
+		</stages>
+		<addedPartProps>
+		  <solid>true</solid>
+		  <partEfficiency>1</partEfficiency>   
+		  <betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<spawnThingOnRemoved>AnimaEye</spawnThingOnRemoved>
+	</HediffDef>
+
+	<ThingDef ParentName="AnimaPart">
+		<defName>AnimaEye</defName>
+		<label>anima eye</label>
+		<description>A colorful, crystal-like sap in the form of an eye, it's quite pretty and... hypnotizing. Enhances psychic meditation.</description>
+		<descriptionHyperlinks>
+			<HediffDef>AnimaEye</HediffDef>
+		</descriptionHyperlinks>
+		<costList>
+		  <MedicineHerbal>10</MedicineHerbal>
+		  <AnimaFiber>200</AnimaFiber>
+		  <WoodLog>100</WoodLog>
+		</costList>
+		<statBases>
+		  <Mass>1.5</Mass>
+		  <MarketValue>500</MarketValue>
+		   <WorkToMake>3000</WorkToMake>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallAnimaEye</defName>
+		<label>install an anima eye</label>
+		<description>Install anima eye.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaEye</ThingDef>
+			<HediffDef>AnimaEye</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing anima eye.</jobString>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>AnimaEye</li>
+			  </thingDefs>
+			</filter>
+			<count>1</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>AnimaEye</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+		  <li>Eye</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>AnimaEye</addsHediff>
+		<skillRequirements>
+		  <Medicine>10</Medicine>
+		</skillRequirements>
+	</RecipeDef>
+  
+	<HediffDef ParentName="AddedBodyPartBase"> <!-- Anima Stomach -->
+		<defName>AnimaStomach</defName>
+		<label>anima stomach</label>
+		<description>An installed anima stomach.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaStomach</ThingDef>
+		</descriptionHyperlinks>
+		<labelNoun>an anima sapwood stomach</labelNoun>  
+		<defaultLabelColor>(0, 0.6, 0.4)</defaultLabelColor>
+		<stages>
+			<li>
+				<foodPoisoningChanceFactor>0.75</foodPoisoningChanceFactor>  
+				<statOffsets>
+					<MeditationFocusGain>0.05</MeditationFocusGain>
+					<PsychicEntropyMax>10</PsychicEntropyMax>
+				</statOffsets>
+			</li>
+		</stages>
+		<addedPartProps>
+		  <solid>true</solid>
+		  <partEfficiency>1</partEfficiency>  
+		  <betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<spawnThingOnRemoved>AnimaStomach</spawnThingOnRemoved>
+	</HediffDef>
+
+	<ThingDef ParentName="AnimaPart">
+		<defName>AnimaStomach</defName>
+		<label>anima stomach</label>
+		<description>A wooden pulsating mass, with anima sap inside it, it blesses everything the person eats. Enhances psychic meditation.</description>
+		<descriptionHyperlinks>
+			<HediffDef>AnimaStomach</HediffDef>
+		</descriptionHyperlinks>
+		<costList>
+		  <MedicineHerbal>10</MedicineHerbal>
+		  <AnimaFiber>300</AnimaFiber>
+		  <WoodLog>50</WoodLog>
+		</costList>
+		<statBases>
+		  <Mass>1.5</Mass>
+		  <MarketValue>500</MarketValue>
+		   <WorkToMake>3000</WorkToMake>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallAnimaStomach</defName>
+		<label>install anima stomach</label>
+		<description>Install anima sapwood stomach.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaStomach</ThingDef>
+			<HediffDef>AnimaStomach</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing anima sapwood stomach.</jobString>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>AnimaStomach</li>
+			  </thingDefs>
+			</filter>
+			<count>1</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>AnimaStomach</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+		  <li>Stomach</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>AnimaStomach</addsHediff>
+		<skillRequirements>
+		  <Medicine>10</Medicine>
+		</skillRequirements>
+	</RecipeDef>
+  
+	<HediffDef ParentName="AddedBodyPartBase"> <!-- Anima Spine -->
+		<defName>AnimaSpine</defName>
+		<label>anima spine</label>
+		<description>An installed anima spine.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaSpine</ThingDef>
+		</descriptionHyperlinks>
+		<labelNoun>an anima trunk spine</labelNoun>  
+		<defaultLabelColor>(0, 0.6, 0.4)</defaultLabelColor>
+		<stages>  
+			<li>
+				<painFactor>0.90</painFactor>
+				<statOffsets>
+					<PainShockThreshold>0.30</PainShockThreshold>
+					<MeditationFocusGain>0.05</MeditationFocusGain>
+					<PsychicEntropyMax>15</PsychicEntropyMax>
+				</statOffsets>
+			</li>
+		</stages>
+		<addedPartProps>
+		  <solid>true</solid>
+		  <partEfficiency>1</partEfficiency>  
+		  <betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<spawnThingOnRemoved>AnimaSpine</spawnThingOnRemoved>  
+	</HediffDef>
+
+	<ThingDef ParentName="AnimaPart">
+		<defName>AnimaSpine</defName>
+		<label>anima spine</label>
+		<description>An anima trunk holding the body together, sending roots all over the body, strengthening it. The roots are less sensitive to pain.</description>
+		<descriptionHyperlinks>
+			<HediffDef>AnimaSpine</HediffDef>
+		</descriptionHyperlinks>
+		<costList>
+		  <MedicineHerbal>10</MedicineHerbal>
+		  <AnimaFiber>100</AnimaFiber>
+		  <WoodLog>500</WoodLog>
+		</costList>
+		<statBases>
+		  <Mass>1.5</Mass>
+		  <MarketValue>500</MarketValue>
+		  <WorkToMake>3000</WorkToMake>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallAnimaSpine</defName>
+		<label>install anima trunk spine</label>
+		<description>Install anima trunk spine.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaSpine</ThingDef>
+			<HediffDef>AnimaSpine</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing anima trunk spine.</jobString>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>AnimaSpine</li>
+			  </thingDefs>
+			</filter>
+			<count>1</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>AnimaSpine</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+		  <li>Spine</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>AnimaSpine</addsHediff>
+		<skillRequirements>
+		  <Medicine>10</Medicine>
+		</skillRequirements>
+	</RecipeDef>
+  
+	<HediffDef ParentName="AddedBodyPartBase"> <!-- Anima Heart -->
+		<defName>AnimaHeart</defName>  
+		<label>anima heart</label>
+		<description>An installed anima heart.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaHeart</ThingDef>
+		</descriptionHyperlinks>
+		<labelNoun>an anima heart</labelNoun>  
+		<defaultLabelColor>(0, 0.6, 0.4)</defaultLabelColor>
+		<stages>
+			<li>
+				<statOffsets>  
+					<PsychicSensitivity>0.10</PsychicSensitivity>
+					<PsychicEntropyMax>15</PsychicEntropyMax>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>BloodPumping</capacity>  
+						<offset>0.10</offset>
+					</li>
+				</capMods>
+				<totalBleedFactor>0.9</totalBleedFactor>  
+			</li>
+		</stages>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1</partEfficiency>  
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<spawnThingOnRemoved>AnimaHeart</spawnThingOnRemoved>
+	</HediffDef>
+
+	<ThingDef ParentName="AnimaPart">
+		<defName>AnimaHeart</defName>
+		<label>anima heart</label>
+		<description>A heart made out of multiple dryads, which helps the user's blood circulation and closes wounds quickier. Expands and strenghtens the owner's psychic abilities.</description>  
+		<descriptionHyperlinks>
+			<HediffDef>AnimaHeart</HediffDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>1000</MarketValue>
+			<WorkToMake>6000</WorkToMake>
+			<Mass>2</Mass>
+		</statBases>
+		<costList>
+		  <MedicineHerbal>20</MedicineHerbal>
+		  <AnimaFiber>500</AnimaFiber>
+		  <WoodLog>100</WoodLog>
+		</costList>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>installAnimaHeart</defName>
+		<label>install anima heart</label>
+		<description>Install anima heart.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaHeart</ThingDef>
+			<HediffDef>AnimaHeart</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing anima heart.</jobString>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>AnimaHeart</li>
+			  </thingDefs>
+			</filter>
+			<count>1</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>AnimaHeart</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Heart</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>AnimaHeart</addsHediff>  
+		<skillRequirements>
+			<Medicine>10</Medicine>
+		</skillRequirements>
+	</RecipeDef>
+</Defs>

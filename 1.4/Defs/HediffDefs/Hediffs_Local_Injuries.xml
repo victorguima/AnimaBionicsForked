@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<HediffDef ParentName="InjuryBase">
+		<defName>ToxinScratch</defName>
+		<label>toxin scratch</label>
+		<labelNoun>a toxin scratch</labelNoun>
+		<description>A scratch or tear, filled with painful toxins.</description>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<labelTendedWell>bandaged</labelTendedWell>
+				<labelTendedWellInner>sutured</labelTendedWellInner>
+				<labelSolidTendedWell>set</labelSolidTendedWell>
+			</li>
+			<li Class="HediffCompProperties_Infecter">
+				<infectionChance>0.15</infectionChance>
+			</li>
+			<li Class="HediffCompProperties_GetsPermanent">
+				<permanentLabel>scratch scar</permanentLabel>
+			</li>
+		</comps>
+		<injuryProps>
+			<painPerSeverity>0.0375</painPerSeverity>
+			<averagePainPerSeverityPermanent>0.01875</averagePainPerSeverityPermanent>
+			<bleedRate>0.06</bleedRate>
+			<canMerge>false</canMerge>
+			<destroyedLabel>Torn off</destroyedLabel>
+			<destroyedOutLabel>Torn out</destroyedOutLabel>
+		</injuryProps>
+	</HediffDef>
+</Defs>
