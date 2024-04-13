@@ -18,6 +18,11 @@
 			<displayName>Anima Gear</displayName>
 			<steamWorkshopUrl>steam://url/CommunityFilePage/2215217049</steamWorkshopUrl>
 		</li>
+		<li>
+			<packageId>imranfish.xmlextensions</packageId>
+			<displayName>XML Extensions</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2574315206</steamWorkshopUrl>
+		</li>
 	</modDependencies>
 	<loadAfter>
 		<li>ludeon.rimworld.royalty</li>
@@ -25,6 +30,7 @@
 		<li>ludeon.rimworld.biotech</li>
 		<li>ludeon.rimworld.anomaly</li>
 		<li>xrushha.AnimaGear</li>	
+		<li>imranfish.xmlextensions</li>
 	</loadAfter>
 	<description>Grow anima body parts, be one with nature, implant anima dryads into your body.</description>
 </ModMetaData>
