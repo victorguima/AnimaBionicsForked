@@ -13,7 +13,7 @@
 		<stages>
 			<li>
 				<statOffsets>
-					<MeleeDodgeChance>-15</MeleeDodgeChance>
+					<!-- <MeleeDodgeChance>-15</MeleeDodgeChance> -->
 					<NegotiationAbility>0.50</NegotiationAbility>
 					<SocialImpact>0.30</SocialImpact>
 					<PsychicSensitivity>0.25</PsychicSensitivity>
@@ -96,7 +96,6 @@
 		<defaultLabelColor>(0, 0.6, 0.4)</defaultLabelColor>  
 		<stages>
 			<li>
-				<!-- <minSeverity>1</minSeverity> -->
 				<statOffsets>
 					<MentalBreakThreshold>0.10</MentalBreakThreshold>
 					<RestRateMultiplier>0.25</RestRateMultiplier>
@@ -106,32 +105,14 @@
 					<li>
 						<capacity>Consciousness</capacity>
 						<offset>0.15</offset>
-						<setMax>1.30</setMax>
+						<!-- <setMax>1.30</setMax> -->
 					</li>
 				</capMods>
 			</li>
-		<!-- 	<li>
-				<minSeverity>2</minSeverity>
-				<statOffsets>
-					<MentalBreakThreshold>0.20</MentalBreakThreshold>
-					<RestRateMultiplier>0.50</RestRateMultiplier>
-					<MeditationFocusGain>0.50</MeditationFocusGain>
-				</statOffsets>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>0.20</offset>
-						<setMax>1.30</setMax>
-					</li>
-				</capMods>
-			</li> -->
 		</stages>
 		<addedPartProps>
 			<betterThanNatural>false</betterThanNatural>
 		</addedPartProps>
-		<!-- <minSeverity>0</minSeverity>
-		<maxSeverity>2</maxSeverity>
-		<initialSeverity>1</initialSeverity> -->
 	</HediffDef>
 
 	<ThingDef ParentName="AnimaImplant">

@@ -5,6 +5,7 @@
     <packageId>Seti.Victor.AnimaBodies</packageId>
 	<supportedVersions>
 		<li>1.4</li>
+		<li>1.5</li>
 	</supportedVersions>
 	<url>https://steamcommunity.com/sharedfiles/filedetails/?id=2879835262</url>
 	<modDependencies>
@@ -19,6 +20,10 @@
 		</li>
 	</modDependencies>
 	<loadAfter>
+		<li>ludeon.rimworld.royalty</li>
+		<li>ludeon.rimworld.ideology</li>
+		<li>ludeon.rimworld.biotech</li>
+		<li>ludeon.rimworld.anomaly</li>
 		<li>xrushha.AnimaGear</li>	
 	</loadAfter>
 	<description>Grow anima body parts, be one with nature, implant anima dryads into your body.</description>

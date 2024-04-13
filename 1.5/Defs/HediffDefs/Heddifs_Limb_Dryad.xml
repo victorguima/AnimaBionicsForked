@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<HediffDef ParentName="AddedBodyPartBase"> <!-- Anima Leg -->
+		<defName>AnimaLeg</defName>
+		<label>anima carrier leg</label>
+		<description>An installed anima carrier leg.</description>  
+		<descriptionHyperlinks>
+			<ThingDef>AnimaLeg</ThingDef>
+		</descriptionHyperlinks>
+		<labelNoun>an anima carrier leg</labelNoun>
+		<defaultLabelColor>(0, 0.6, 0.4)</defaultLabelColor>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1</partEfficiency>  
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<stages>  
+			<li>
+				<statOffsets>
+					<MeditationFocusGain>0.10</MeditationFocusGain>
+					<CarryingCapacity>25</CarryingCapacity>
+				</statOffsets>
+			</li>
+		</stages>
+		<spawnThingOnRemoved>AnimaLeg</spawnThingOnRemoved>
+	</HediffDef>
+
+	<ThingDef ParentName="AnimaPart">
+		<defName>AnimaLeg</defName>
+		<label>anima carrier leg</label>
+		<description>This leg shares a psychic bond with a special kind of dryad, granting supernatural strenght. Enhances psychic meditation.</description>  
+		<descriptionHyperlinks>
+			<HediffDef>AnimaLeg</HediffDef>
+		</descriptionHyperlinks>
+		<costList>
+		  <MedicineHerbal>10</MedicineHerbal>
+		  <AnimaFiber>200</AnimaFiber>
+		  <WoodLog>300</WoodLog>
+		</costList>
+		<statBases>
+		  <Mass>1.5</Mass>
+		  <MarketValue>500</MarketValue>
+		   <WorkToMake>3000</WorkToMake>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallAnimaLeg</defName>
+		<label>install anima carrier leg</label>
+		<description>Install an anima carrier leg.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaLeg</ThingDef>
+			<HediffDef>AnimaLeg</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing an anima carrier leg.</jobString>
+		<skillRequirements>
+		  <Medicine>10</Medicine>
+		</skillRequirements>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>AnimaLeg</li>
+			  </thingDefs>
+			</filter>
+			<count>1</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>AnimaLeg</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+		  <li>Leg</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>AnimaLeg</addsHediff>
+	</RecipeDef>
+
+<!-- 	<RecipeDef ParentName="SurgeryRemoveImplantBase">
+		<defName>RemoveAnimaLeg</defName>
+		<label>remove anima carrier leg</label>
+		<description>Remove anima carrier leg.</description>
+		<jobString>Removing anima carrier leg.</jobString>
+		<removesHediff>AnimaLeg</removesHediff>
+	</RecipeDef> -->
+
+	<HediffDef ParentName="AddedBodyPartBase"> <!-- Anima War Arm -->
+		<defName>AnimaWarArm</defName>
+		<label>anima clawer arm</label>
+		<description>An installed anima clawer arm.</description>   
+		<descriptionHyperlinks>
+			<ThingDef>AnimaWarArm</ThingDef>
+		</descriptionHyperlinks>
+		<labelNoun>an anima clawer arm</labelNoun>
+		<defaultLabelColor>(0, 0.6, 0.4)</defaultLabelColor>
+		<comps>
+		  <li Class="HediffCompProperties_VerbGiver">
+			<tools>
+			  <li>
+				<label>Claw</label>
+				<capacities>
+					<li>ToxinScratch</li>
+				</capacities>
+				<power>9</power>
+				<armorPenetration>0.4</armorPenetration>
+				<cooldownTime>1.5</cooldownTime>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			  </li>
+			</tools>
+		  </li>
+		</comps>
+		<stages>
+		  <li>
+			<statOffsets>
+			  <MeditationFocusGain>0.05</MeditationFocusGain>  
+			</statOffsets>
+		  </li>
+		</stages>
+		<spawnThingOnRemoved>AnimaWarArm</spawnThingOnRemoved>
+		<addedPartProps>
+			<betterThanNatural>false</betterThanNatural>
+			<isGoodWeapon>true</isGoodWeapon>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+	</HediffDef>
+
+	<ThingDef ParentName="AnimaPart">
+		<defName>AnimaWarArm</defName>
+		<label>anima clawer arm</label>
+		<description>An anima clawer arm, consisting of multiple very sharp sticks that mimic clawer dryads during combat. 
+		\nIts sharp points are covered with tiny needles filled with a powerful toxin, capable of paralyzing foes with pain. 
+		\nEnhances psychic meditation.</description>  
+		<descriptionHyperlinks>
+			<HediffDef>AnimaWarArm</HediffDef>
+		</descriptionHyperlinks>
+		<costList>
+		  <MedicineHerbal>10</MedicineHerbal>
+		  <AnimaFiber>300</AnimaFiber>
+		  <WoodLog>300</WoodLog>
+		</costList>
+		<statBases>
+		  <Mass>4</Mass>
+		  <MarketValue>1000</MarketValue>
+		   <WorkToMake>4000</WorkToMake>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallAnimaWarArm</defName>
+		<label>install an anima clawer arm</label>
+		<description>Install anima clawer arm.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaWarArm</ThingDef>
+			<HediffDef>AnimaWarArm</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing anima clawer arm.</jobString>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>AnimaWarArm</li>
+			  </thingDefs>
+			</filter>
+			<count>1</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>AnimaWarArm</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+		  <li>Arm</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>AnimaWarArm</addsHediff>
+		<skillRequirements>
+		  <Medicine>10</Medicine>
+		</skillRequirements>
+	</RecipeDef>
+  
+<!-- 	<RecipeDef ParentName="SurgeryRemoveImplantBase">
+		<defName>RemoveAnimaWarArm</defName>
+		<label>remove anima anima clawer arm</label>
+		<description>Remove anima clawer arm.</description>
+		<jobString>Removing anima clawer arm.</jobString>
+		<removesHediff>AnimaWarArm</removesHediff>
+	</RecipeDef> -->
+
+	<ThingDef ParentName="AnimaPart">
+		<defName>AnimaEntArm</defName>
+		<label>anima gauranlen arm</label>
+		<description>An arm that mimitizes a gauranlen connection, improving the user's psychic bond with the planet's flora. Enhances psychic meditation.</description>
+		<descriptionHyperlinks>
+			<HediffDef>AnimaEntArm</HediffDef>
+		</descriptionHyperlinks>
+		<costList>
+			<MedicineHerbal>10</MedicineHerbal>
+			<AnimaFiber>300</AnimaFiber>
+			<WoodLog>300</WoodLog>
+		</costList>
+		<statBases>
+			<Mass>5</Mass>
+			<MarketValue>500</MarketValue>
+			<WorkToMake>3000</WorkToMake>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="AddedBodyPartBase"> <!-- Anima gauranlen Arm -->
+		<defName>AnimaEntArm</defName>  
+		<label>anima gauranlen arm</label>
+		<labelNoun>anima gauranlen arm</labelNoun>
+		<description>An installed anima gauranlen arm.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaEntArm</ThingDef>
+		</descriptionHyperlinks>
+		<spawnThingOnRemoved>AnimaEntArm</spawnThingOnRemoved>
+		<defaultLabelColor>(0, 0.6, 0.4)</defaultLabelColor>
+		<stages>
+			<li>
+				<statOffsets>
+					<PlantHarvestYield>0.2</PlantHarvestYield>
+					<PruningSpeed MayRequire="ludeon.rimworld.ideology">0.05</PruningSpeed>
+					<MeditationFocusGain>0.10</MeditationFocusGain>
+				</statOffsets>
+			</li>
+		</stages>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1</partEfficiency>  
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+   
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallAnimaEntArm</defName>
+		<label>install anima gauranlen arm</label>
+		<description>Installs anima gauranlen arm.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaEntArm</ThingDef>
+			<HediffDef>AnimaEntArm</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing anima gauranlen arm.</jobString>
+		<ingredients>
+		 <li>
+			<filter>
+			   <thingDefs>
+				  <li>AnimaEntArm</li>
+			   </thingDefs>
+			</filter>
+			<count>1</count>
+		 </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		 <thingDefs>
+			<li>AnimaEntArm</li>
+		 </thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+		 <li>Shoulder</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>AnimaEntArm</addsHediff>  
+	</RecipeDef>
+   
+  <!--  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+		<defName>RemoveAnimaEntArm</defName>
+		<label>remove anima gauranlen arm</label>
+		<description>Remove a gauranlen arm.</description>
+		<jobString>Removing gauranlen arm.</jobString>
+		<removesHediff>AnimaEntArm</removesHediff>
+	</RecipeDef> -->
+
+	<HediffDef ParentName="ImplantHediffBase"> <!-- Anima Horn -->
+		<defName>AnimaHorn</defName> 
+		<label>anima horn</label>
+		<description>An installed anima anima horn.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaHorn</ThingDef>
+		</descriptionHyperlinks>
+		<labelNoun>an anima horn</labelNoun>  
+		<defaultLabelColor>(0, 0.6, 0.4)</defaultLabelColor>
+		<stages>
+			<li>
+				<statOffsets>  
+					<VPE_PsyfocusCostFactor MayRequire="vanillaexpanded.vpsycastse">-0.10</VPE_PsyfocusCostFactor>
+					<PsychicEntropyMax>20</PsychicEntropyMax>
+					<MeditationFocusGain>0.2</MeditationFocusGain>
+				</statOffsets>
+			</li>
+		</stages>
+		<!-- <addedPartProps>
+			<solid>false</solid>
+			<partEfficiency>1</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps> -->
+		<spawnThingOnRemoved>AnimaHorn</spawnThingOnRemoved>
+	</HediffDef>
+
+	<ThingDef ParentName="AnimaPart">
+		<defName>AnimaHorn</defName>
+		<label>anima horn</label>
+		<description>An intricately carved horn, capable of intense psychic focus. Legend say of an ancient civilization whose people grew beautiful horns like this one, but disappeared after meeting their machine god.</description>
+		<descriptionHyperlinks>
+			<HediffDef>AnimaHorn</HediffDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>1000</MarketValue>
+			<WorkToMake>6000</WorkToMake>
+			<Mass>2</Mass>
+		</statBases>
+		<costList>
+			<VPE_Eltex MayRequire="vanillaexpanded.vpsycastse">1</VPE_Eltex>
+			<MedicineHerbal>20</MedicineHerbal>
+			<AnimaFiber>500</AnimaFiber>
+			<ThrumboHorn>1</ThrumboHorn>
+		</costList>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
+		<defName>InstallAnimaHorn</defName>
+		<label>install anima horn</label>
+		<description>Install anima horn.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaHorn</ThingDef>
+			<HediffDef>AnimaHorn</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing anima horn.</jobString>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>AnimaHorn</li>
+			  </thingDefs>
+			</filter>
+			<count>1</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>AnimaHorn</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Head</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>AnimaHorn</addsHediff>
+		<skillRequirements>
+			<Medicine>12</Medicine>
+		</skillRequirements>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="SurgeryRemoveImplantBase">
+		<defName>RemoveAnimaHorn</defName>
+		<label>remove anima horn</label>
+		<description>Remove a anima horn.</description>
+		<jobString>Removing anima horn.</jobString>
+		<removesHediff>AnimaHorn</removesHediff>
+	</RecipeDef>
+</Defs>

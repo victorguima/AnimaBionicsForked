@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs> 
+	<XmlExtensions.SettingsMenuDef>
+		<defName>Victor.AnimaBionicsForked.Settings</defName>
+		<modId>Seti.Victor.AnimaBodies</modId>
+		<label>Anima Bionics Forked</label>
+		<settings>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>CHANGES REQUIRE RESTART</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine"/>
+			
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Brain Implant mechanics:</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+			</li>
+
+			<li Class="XmlExtensions.Setting.RadioButtons">
+				<key>BrainImplant_Setting</key>
+				<defaultValue>0</defaultValue>
+				<!-- <spacing>-1</spacing> -->
+				<buttons>
+					<li>
+						<label>Reworked</label>
+						<value>0</value>
+						<tooltip>Reworked version adds a MeleeDodgeChance penalty to the Psychic Dryad and a setMax to conscionousness capping it to 130% on the Mind Dryad.</tooltip>
+					</li>
+					<li>
+						<label>Classic</label>
+						<value>1</value>
+						<tooltip>Classic version doesn't have any disadvantages on both the Brain Implants.</tooltip>
+					</li>
+				</buttons>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine"/>			
+		</settings>
+	</XmlExtensions.SettingsMenuDef>
+</Defs>
