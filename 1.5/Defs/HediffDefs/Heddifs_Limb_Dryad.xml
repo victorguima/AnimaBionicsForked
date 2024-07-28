@@ -356,4 +356,153 @@
 		<jobString>Removing anima horn.</jobString>
 		<removesHediff>AnimaHorn</removesHediff>
 	</RecipeDef>
+	
+	<ThingDef ParentName="AnimaPart">
+		<defName>AnimaNose</defName>
+		<label>anima nose</label>
+		<description>A nose made of sensitive anima grass, capable of sensing a wide range of pheromones, which helps in communicating with the local fauna. Enhances psychic meditation.</description>
+		<descriptionHyperlinks>
+			<HediffDef>AnimaNose</HediffDef>
+		</descriptionHyperlinks>
+		<costList>
+			<MedicineHerbal>5</MedicineHerbal>
+			<AnimaFiber>150</AnimaFiber>
+			<WoodLog>50</WoodLog>
+		</costList>
+		<statBases>
+			<Mass>1</Mass>
+			<MarketValue>250</MarketValue>
+			<WorkToMake>1500</WorkToMake>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="AddedBodyPartBase"> <!-- Anima gauranlen Arm -->
+		<defName>AnimaNose</defName>  
+		<label>anima nose</label>
+		<labelNoun>anima nose</labelNoun>
+		<description>An installed anima nose.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaNose</ThingDef>
+		</descriptionHyperlinks>
+		<spawnThingOnRemoved>AnimaNose</spawnThingOnRemoved>
+		<defaultLabelColor>(0, 0.6, 0.4)</defaultLabelColor>
+		<stages>
+			<li>
+				<statOffsets>
+					<MeditationFocusGain>0.05</MeditationFocusGain>
+					<TameAnimalChance>0.1</TameAnimalChance>
+					<TrainAnimalChance>0.1</TrainAnimalChance>
+				</statOffsets>
+			</li>
+		</stages>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1</partEfficiency>  
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+   
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallAnimaNose</defName>
+		<label>install anima nose</label>
+		<description>Installs anima nose.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaNose</ThingDef>
+			<HediffDef>AnimaNose</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing anima nose.</jobString>
+		<ingredients>
+		 <li>
+			<filter>
+			   <thingDefs>
+				  <li>AnimaNose</li>
+			   </thingDefs>
+			</filter>
+			<count>1</count>
+		 </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		 <thingDefs>
+			<li>AnimaNose</li>
+		 </thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+		 <li>Nose</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>AnimaNose</addsHediff>  
+	</RecipeDef>
+	
+	<ThingDef ParentName="AnimaPart">
+		<defName>AnimaJaw</defName>
+		<label>anima jaw</label>
+		<description>A jaw made of sturdy hardwood, its sap contains natural healing properties. Enhances psychic meditation.</description>
+		<descriptionHyperlinks>
+			<HediffDef>AnimaJaw</HediffDef>
+		</descriptionHyperlinks>
+		<costList>
+			<MedicineHerbal>5</MedicineHerbal>
+			<AnimaFiber>150</AnimaFiber>
+			<WoodLog>50</WoodLog>
+		</costList>
+		<statBases>
+			<Mass>1</Mass>
+			<MarketValue>250</MarketValue>
+			<WorkToMake>1500</WorkToMake>
+		</statBases>
+	</ThingDef>
+
+	<HediffDef ParentName="AddedBodyPartBase"> <!-- Anima gauranlen Arm -->
+		<defName>AnimaJaw</defName>  
+		<label>anima jaw</label>
+		<labelNoun>anima jaw</labelNoun>
+		<description>An installed anima jaw.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaJaw</ThingDef>
+		</descriptionHyperlinks>
+		<spawnThingOnRemoved>AnimaJaw</spawnThingOnRemoved>
+		<defaultLabelColor>(0, 0.6, 0.4)</defaultLabelColor>
+		<stages>
+			<li>
+				<statOffsets>
+					<MeditationFocusGain>0.05</MeditationFocusGain>
+					<MedicalTendQuality>0.15</MedicalTendQuality>
+				</statOffsets>
+			</li>
+		</stages>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1</partEfficiency>  
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+   
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallAnimaJaw</defName>
+		<label>install anima jaw</label>
+		<description>Installs anima jaw.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AnimaJaw</ThingDef>
+			<HediffDef>AnimaJaw</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing anima jaw.</jobString>
+		<ingredients>
+		 <li>
+			<filter>
+			   <thingDefs>
+				  <li>AnimaJaw</li>
+			   </thingDefs>
+			</filter>
+			<count>1</count>
+		 </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		 <thingDefs>
+			<li>AnimaJaw</li>
+		 </thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+		 <li>Jaw</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>AnimaJaw</addsHediff>  
+	</RecipeDef>
 </Defs>

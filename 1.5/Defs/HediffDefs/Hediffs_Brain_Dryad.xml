@@ -28,7 +28,7 @@
 	<ThingDef ParentName="AnimaImplant">
 		<defName>PsychicDryad</defName>
 		<label>psychic dryad</label>  
-		<description>A special kind of dryad that can sense and understand human emotions, very powerful in the right hands. In combat, however, being able to unconsciously read enemies' aggression can cause hesitation.</description>
+		<description>A special kind of dryad that can sense and understand human emotions, very powerful in the right hands. In combat, however, being able to unconsciously read enemies' aggression can cause hesitation. (Reduces melee dodge chance if enabled in the mod settings)</description>
 		<descriptionHyperlinks>
 			<HediffDef>PsychicDryad</HediffDef>
 		</descriptionHyperlinks>
@@ -120,7 +120,7 @@
 		<label>mind dryad</label>  
 		<description>A fully grown dryad, able to fill in while the brain is resting.
 		\nUsed to a tranquil existance, can aid in maintaining focus during meditation, but does not like to be under pressure.
-		\nWhile the mind dryad can adapt very well to the natural brain, any consciousness affecting drugs or implants will be considered threats and be nullified by it(caps consciousness in 100%).</description>
+		\nWhile the mind dryad can adapt very well to the natural brain, any consciousness affecting drugs or implants will be considered threats and be nullified by it(caps consciousness at 130% if enabled in the mod settings).</description>
 		<descriptionHyperlinks>
 			<HediffDef>MindDryad</HediffDef>
 		</descriptionHyperlinks>
