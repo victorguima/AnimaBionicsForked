@@ -34,6 +34,7 @@
 			<researchPrerequisite>AnimaImplants</researchPrerequisite>
 			<recipeUsers>
 				<li>CraftingSpot</li>
+				<li>TableSculpting</li>
 			</recipeUsers>
 		</recipeMaker>
 	</ThingDef>
@@ -70,6 +71,7 @@
 			<researchPrerequisite>AnimaImplants</researchPrerequisite>
 			<recipeUsers>
 				<li>CraftingSpot</li>
+				<li>TableSculpting</li>
 			</recipeUsers>
 		</recipeMaker>
 	</ThingDef>
