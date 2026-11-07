@@ -23,6 +23,7 @@
 			</li>
 		</stages>
 		<spawnThingOnRemoved>AnimaLeg</spawnThingOnRemoved>
+		<priceImpact>false</priceImpact>
 	</HediffDef>
 
 	<ThingDef ParentName="AnimaPart">
@@ -40,7 +41,7 @@
 		<statBases>
 		  <Mass>1.5</Mass>
 		  <MarketValue>500</MarketValue>
-		   <WorkToMake>3000</WorkToMake>
+		  <WorkToMake>3000</WorkToMake>
 		</statBases>
 	</ThingDef>
 
@@ -141,8 +142,8 @@
 		</costList>
 		<statBases>
 		  <Mass>4</Mass>
-		  <MarketValue>1000</MarketValue>
-		   <WorkToMake>4000</WorkToMake>
+		  <MarketValue>500</MarketValue>
+		  <WorkToMake>4000</WorkToMake>
 		</statBases>
 	</ThingDef>
 

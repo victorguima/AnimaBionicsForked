@@ -7,68 +7,19 @@
 		<li>1.4</li>
 		<li>1.5</li>
 		<li>1.6</li>
+		<li>1.7</li>
 	</supportedVersions>
 	<url>https://steamcommunity.com/sharedfiles/filedetails/?id=2879835262</url>
-	<modDependenciesByVersion>
-		<v1.4>
-			<li>
-				<packageId>Ludeon.RimWorld.Royalty</packageId>
-				<displayName>Royalty</displayName>
-			</li>
-			<li>
-				<packageId>xrushha.AnimaGear</packageId>
-				<displayName>Anima Gear</displayName>
-				<steamWorkshopUrl>steam://url/CommunityFilePage/2215217049</steamWorkshopUrl>
-			</li>
-			<li>
-				<packageId>imranfish.xmlextensions</packageId>
-				<displayName>XML Extensions</displayName>
-				<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2574315206</steamWorkshopUrl>
-			</li>
-		</v1.4>
-		<v1.5>
-			<li>
-				<packageId>Ludeon.RimWorld.Royalty</packageId>
-				<displayName>Royalty</displayName>
-			</li>
-			<li>
-				<packageId>xrushha.AnimaGear</packageId>
-				<displayName>Anima Gear</displayName>
-				<steamWorkshopUrl>steam://url/CommunityFilePage/2215217049</steamWorkshopUrl>
-			</li>
-			<li>
-				<packageId>imranfish.xmlextensions</packageId>
-				<displayName>XML Extensions</displayName>
-				<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2574315206</steamWorkshopUrl>
-			</li>
-		</v1.5>
-		<v1.6>
-			<li>
-				<packageId>Ludeon.RimWorld.Royalty</packageId>
-				<displayName>Royalty</displayName>
-			</li>
-			<li>
-				<packageId>xrushha.NOTDemo.AnimaGear</packageId>
-				<displayName>Anima Gear - Continued</displayName>
-				<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=3545349562</steamWorkshopUrl>
-			</li>
-			<li>
-				<packageId>imranfish.xmlextensions</packageId>
-				<displayName>XML Extensions</displayName>
-				<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2574315206</steamWorkshopUrl>
-			</li>
-		</v1.6>
-	</modDependenciesByVersion>
-	<!-- <modDependencies>
+	<modDependencies>
 		<li>
 			<packageId>Ludeon.RimWorld.Royalty</packageId>
 			<displayName>Royalty</displayName>
 		</li>
-		<li>
+		<!-- <li>
 			<packageId>xrushha.AnimaGear</packageId>
 			<displayName>Anima Gear</displayName>
 			<steamWorkshopUrl>steam://url/CommunityFilePage/2215217049</steamWorkshopUrl>
-		</li>
+		</li> -->
 		<li>
 			<packageId>xrushha.notdemo.animagear</packageId>
 			<displayName>Anima Gear - Continued</displayName>
@@ -79,7 +30,7 @@
 			<displayName>XML Extensions</displayName>
 			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2574315206</steamWorkshopUrl>
 		</li>
-	</modDependencies> -->
+	</modDependencies>
 	<loadAfter>
 		<li>ludeon.rimworld.royalty</li>
 		<li>ludeon.rimworld.ideology</li>
@@ -90,7 +41,5 @@
 		<li>xrushha.notdemo.animagear</li>
 		<li>ghastly.visualcybernetics</li>	
 	</loadAfter>
-	<description>Grow anima body parts, be one with nature, implant anima dryads into your body.
-	
-Now with graphics for Visible Cybernetics.</description>
+	<description>Grow anima body parts, be one with nature, implant anima dryads into your body.</description>
 </ModMetaData>

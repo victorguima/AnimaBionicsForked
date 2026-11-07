@@ -22,6 +22,7 @@
 		<addedPartProps>
 			<betterThanNatural>false</betterThanNatural>
 		</addedPartProps>
+		<priceImpact>false</priceImpact>
 	</HediffDef>
 
 	<ThingDef ParentName="AnimaImplant">
@@ -37,7 +38,9 @@
 		  <WoodLog>500</WoodLog>
 		</costList>
 		<statBases>
-		  <Mass>2.5</Mass>
+			<WorkToMake>3000</WorkToMake>
+			<MarketValue>500</MarketValue>
+			<Mass>2.5</Mass>
 		</statBases>
 	</ThingDef>
 
@@ -129,7 +132,7 @@
 		<statBases>
 		  <Mass>1.5</Mass>
 		  <MarketValue>500</MarketValue>
-		   <WorkToMake>3000</WorkToMake>
+		  <WorkToMake>3000</WorkToMake>
 		</statBases>
 	</ThingDef>
 
@@ -285,7 +288,7 @@
 		<statBases>
 		  <Mass>1.5</Mass>
 		  <MarketValue>500</MarketValue>
-		   <WorkToMake>3000</WorkToMake>
+		  <WorkToMake>3000</WorkToMake>
 		</statBases>
 	</ThingDef>
 
@@ -362,7 +365,7 @@
 		<statBases>
 		  <Mass>1.5</Mass>
 		  <MarketValue>500</MarketValue>
-		   <WorkToMake>3000</WorkToMake>
+		  <WorkToMake>3000</WorkToMake>
 		</statBases>
 	</ThingDef>
 
@@ -440,7 +443,7 @@
 		<statBases>
 		  <Mass>1.5</Mass>
 		  <MarketValue>500</MarketValue>
-		   <WorkToMake>3000</WorkToMake>
+		  <WorkToMake>3000</WorkToMake>
 		</statBases>
 	</ThingDef>
 

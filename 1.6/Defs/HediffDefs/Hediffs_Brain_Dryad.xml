@@ -23,6 +23,7 @@
 		<addedPartProps>
 		  <betterThanNatural>false</betterThanNatural>
 		</addedPartProps>
+		<priceImpact>false</priceImpact>
 	</HediffDef>
 
 	<ThingDef ParentName="AnimaImplant">
@@ -125,8 +126,8 @@
 			<HediffDef>MindDryad</HediffDef>
 		</descriptionHyperlinks>
 		<statBases>
-		  <MarketValue>1000</MarketValue>
-			   <WorkToMake>6000</WorkToMake>
+			<MarketValue>1000</MarketValue>
+			<WorkToMake>6000</WorkToMake>
 		</statBases>
 		<costList>
 		  <MedicineHerbal>20</MedicineHerbal>

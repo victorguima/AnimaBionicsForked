@@ -20,7 +20,7 @@
 			<WorkToMake>3500</WorkToMake>
 		</statBases>
 		<techHediffsTags>
-			<li>Advanced</li>
+			<li>Poor</li>
 		</techHediffsTags>
 		<recipeMaker>
 			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -37,6 +37,7 @@
 				<li>TableSculpting</li>
 			</recipeUsers>
 		</recipeMaker>
+		<!-- <tradeability>None</tradeability> -->
 	</ThingDef>
 
 	<ThingDef Name="AnimaImplant" ParentName="BodyPartBase" Abstract="True">
@@ -57,7 +58,7 @@
 			<WorkToMake>3500</WorkToMake>
 		</statBases>
 		<techHediffsTags>
-			<li>Advanced</li>
+			<li>Poor</li>
 		</techHediffsTags>
 		<recipeMaker>
 			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -74,6 +75,7 @@
 				<li>TableSculpting</li>
 			</recipeUsers>
 		</recipeMaker>
+		<!-- <tradeability>None</tradeability> -->
 	</ThingDef>
 
 	<ThingDef ParentName="UnfinishedBase">
